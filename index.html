@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/todoList.css">
+    <link rel="stylesheet" href="style/themes.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html"><button>Home</button></a>
+        <div id="themeBlock">
+            <button id="themeBtn">Themes</button>
+            <div id="themeContent">
+
+                <div id="customTheme">
+                    <input type="radio" name="checkTheme" onclick="setTheme(this.parentNode)" id="themeRadio">
+                    <input type="color" title="Background" id="colorInput" oninput="setTheme(this.parentNode)">
+                    <input type="color" title="Details" id="colorInput" oninput="setTheme(this.parentNode)">
+                    <input type="color" title="Text" id="colorInput" oninput="setTheme(this.parentNode)">
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <div id="container">
+        <div id="todoBlock">
+            <div id="addTodoBlock">
+                <input type="text" id="todoText" placeholder="Insert text...">
+                <button id="addBtn" onclick="createTodo()">Add</button>
+            </div>
+        </div>
+    </div>
+    <script src="script/todo.js"></script>
+    <script src="script/themes.js"></script>
+
+    <footer>
+        <button id="clearDataBtn" onclick="localStorage.clear(); location.reload();">Clear Data</button>
+    </footer>
+</body>
+
+</html>

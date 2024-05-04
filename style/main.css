@@ -1,0 +1,70 @@
+:root{
+    --BGColor : #FBF6D9;
+    --detailColor: #F4AC36;
+    --textColor: #21181B;
+}
+
+@font-face {
+    font-family: ComicSans;
+    src: url(font/ComicSansMS3.ttf);
+}
+
+::placeholder{
+    color: var(--textColor);
+    opacity: .7;
+}
+
+*{
+    box-sizing: border-box;
+    background-color: var(--BGColor);
+    color: var(--textColor);
+    font-family: ComicSans, cursive, monospace;
+    font-weight: 600;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+button, input[type='checkbox']{
+    border: 1px solid var(--textColor);
+    filter: brightness(100%);
+    transform: scale(1);
+    transition-property: transform, filter;
+    transition-duration: .3s;
+}
+
+button:hover, input[type='checkbox']:hover{
+    filter: brightness(120%);
+    transform: scale(1.1);
+    transition-property: transform, filter;
+    transition-duration: .3s;
+}
+
+footer #clearDataBtn{
+    font-size: 16px;
+    font-weight: 400;
+    transform: none;
+    transition: none;
+    border: 0;
+    background-color: transparent;
+
+}
+footer #clearDataBtn:hover{
+    cursor: pointer;
+}
